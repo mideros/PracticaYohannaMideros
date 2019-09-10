@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RoomPeliculas</string>
+    <string name="tv_login">LOGIN</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_password">password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="url_pelicula">https://www.abc.es/play/cine/peliculas/</string>
+    <string name="app_list">LISTADO DE PELICULAS</string>
+    <string name="app_login">LOGIN</string>
 </resources>
