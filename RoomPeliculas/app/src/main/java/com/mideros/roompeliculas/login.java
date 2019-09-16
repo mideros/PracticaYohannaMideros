@@ -3,6 +3,7 @@ package com.mideros.roompeliculas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class login extends AppCompatActivity {
 
@@ -17,5 +18,8 @@ public class login extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         finish();
         return true;
+    }
+
+    public void login(View view) {
     }
 }

@@ -14,77 +14,78 @@ public class Pelicula {
     @PrimaryKey
     @NonNull
     private String id;
-    @ColumnInfo(name = "titulo")
-    private String titulo;
-    @ColumnInfo(name = "descripcion")
-    private String descripcion;
+    @ColumnInfo(name = "title")
+    private String title;
+    @ColumnInfo(name = "description")
+    private String description;
     @ColumnInfo(name = "year")
-    private Date year;
-    @ColumnInfo(name = "puntuacion")
-    private int puntuacion;
-    @ColumnInfo(name = "imagen")
-    private String imagen;
+    private int year;
+    @ColumnInfo(name = "punctuation")
+    private int punctuation;
+    @ColumnInfo(name = "image")
+    private String image;
 
     public Pelicula() {
-
         id = UUID.randomUUID().toString();
     }
 
-    public Pelicula(String titulo, String descripcion, Date year, int puntuacion, String imagen) {
+    public Pelicula(String title, String description, int year, int punctuation, String image) {
 
         id = UUID.randomUUID().toString();
-        this.titulo = titulo;
-        this.descripcion = descripcion;
+        this.title = title;
+        this.description = description;
         this.year = year;
-        this.puntuacion = puntuacion;
-        this.imagen = imagen;
+        this.punctuation = punctuation;
+        this.image = image;
     }
 
+    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Date getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(Date year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public int getPuntuacion() {
-        return puntuacion;
+    public int getPunctuation() {
+        return punctuation;
     }
 
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setPunctuation(int punctuation) {
+        this.punctuation = punctuation;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getImage() {
+        return image;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setImage(String image) {
+        this.image = image;
     }
 }
+

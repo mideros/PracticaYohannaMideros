@@ -13,18 +13,15 @@ import java.util.List;
 @Dao
 public interface PeliculaDao {
 
-    @Query("SELECT * From pelicula")
+    @Query("SELECT * FROM pelicula")
     List<Pelicula> getPeliculas();
 
-    @Query("SELECT * FROM pelicula where id like :uuid")
+    @Query("SELECT * FROM Pelicula WHERE id LIKE :uuid")
     Pelicula getPelicula(String uuid);
-
     @Insert
     void addPelicula(Pelicula p);
-
     @Delete
     void deletePelicula(Pelicula p);
-
     @Update
     void updatePelicula(Pelicula p);
 }
