@@ -3,6 +3,7 @@ package com.mideros.roompeliculas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listview;
     PeliculaAdapter adapter;
     PeliculaController controller;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +39,30 @@ public class MainActivity extends AppCompatActivity {
         listview.setAdapter(adapter); // le decimos a este listview cual es su adapter
         controller= PeliculaController.get(this); // inicializa el controler
 
+        prefs = getSharedPreferences("MyPreferences",MODE_PRIVATE);
+
+        String email = prefs.getString("email", null);
+        String password = prefs.getString("password",null);
+
+        if((email==null)&&(password==null)){
+            login();
+        }
+
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                /*Passem com a EXTRA l'id de la persona seleccionada*/
+
                 intent.putExtra("idPersona", peliculas.get(i).getId());
                 startActivity(intent);
             }
         });
+    }
+
+    public void login()
+    {
+        Intent intent = new Intent(MainActivity.this, login.class);
+        startActivity(intent);
     }
 
     @Override

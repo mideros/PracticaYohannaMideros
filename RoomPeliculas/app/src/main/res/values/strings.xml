@@ -19,6 +19,8 @@
     <string name="errorEmpyYear">write the year of publication</string>
     <string name="errorEmpyPunctuation">write a score between 0 and 5</string>
     <string name="errorEmpyImage">write a url for the image movie</string>
+    <string name="errorEmpyEmail">write a email</string>
+    <string name="errorEmpyPassword">write a password</string>
     <string name="url_movie">https://www.abc.es/play/cine/peliculas/</string>
 </resources>
 
