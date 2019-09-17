@@ -75,7 +75,7 @@ public class InspirationActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Movie>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),R.string.errorConection,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),R.string.errorConnection,Toast.LENGTH_LONG).show();
             }
         });
 
