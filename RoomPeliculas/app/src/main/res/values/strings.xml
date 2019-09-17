@@ -26,6 +26,7 @@
     <string name="errorEmpyPassword">Escribe la  contraseña</string>
     <string name="errorEmpyLogin">Debes escribir un email y password</string>
     <string name="errorConnection">Error con la conexión con la ghibliapi </string>
+    <string name="hintPunctuation">Escribe una puntuación entre 0 y 5</string>
     <string name="url_movie">https://www.abc.es/play/cine/peliculas/</string>
 </resources>
 
