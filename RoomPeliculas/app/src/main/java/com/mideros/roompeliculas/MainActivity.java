@@ -89,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, CreateActivity.class);
                 startActivity(intent);
                 return (true);
+            case R.id.item2:
+                Intent intent2 = new Intent(MainActivity.this, InspirationActivity.class);
+                startActivity(intent2);
+                return (true);
         }
         return (super.onOptionsItemSelected(item));
     }

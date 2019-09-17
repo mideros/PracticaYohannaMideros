@@ -26,6 +26,7 @@ public class login extends AppCompatActivity {
         et_password=findViewById(R.id.et_password);
 
         prefs = getSharedPreferences("MyPreferences",MODE_PRIVATE);
+        getSupportActionBar().setTitle(R.string.app_login);
     }
 
     public void loginMovie(View view) {
@@ -41,12 +42,12 @@ public class login extends AppCompatActivity {
         if ("".equals(et_email.getText().toString())) {
             fieldsOk = false;
             et_email.setError(getString(R.string.errorEmpyEmail));
-            Toast.makeText(this, getString(R.string.errorEmpyEmail), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.errorEmpyLogin), Toast.LENGTH_SHORT).show();
         }
         if ("".equals(et_password.getText().toString())) {
             fieldsOk = false;
             et_password.setError(getString(R.string.errorEmpyPassword));
-            Toast.makeText(this, getString(R.string.errorEmpyPassword), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.errorEmpyLogin), Toast.LENGTH_SHORT).show();
         }
         savePreferences();
         return fieldsOk;

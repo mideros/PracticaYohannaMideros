@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">RoomMovies</string>
     <string name="app_list">List of movies</string>
-    <string name="app_login">LOGIN</string>
+    <string name="app_listapi">List of movies Ghibli</string>
+    <string name="app_create">Create a movie</string>
+    <string name="app_detail">Movie detail</string>
+    <string name="app_login">Login</string>
     <string name="tv_login">LOGIN</string>
     <string name="tv_email">Email</string>
     <string name="tv_password">password</string>
@@ -21,6 +24,8 @@
     <string name="errorEmpyImage">write a url for the image movie</string>
     <string name="errorEmpyEmail">write a email</string>
     <string name="errorEmpyPassword">write a password</string>
+    <string name="errorEmpyLogin">write a email and password</string>
+    <string name="errorConnection">Wrong connection with the ghibliapi </string>
     <string name="url_movie">https://www.abc.es/play/cine/peliculas/</string>
 </resources>
 

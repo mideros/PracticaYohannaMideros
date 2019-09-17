@@ -16,21 +16,19 @@ public class CreateActivity extends AppCompatActivity {
     PeliculaController controller;
     Pelicula pelicula;
     String id;
-    Button btn_create;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
 
+        getSupportActionBar().setTitle(R.string.app_create);
+
         et_title = findViewById(R.id.et_title);
         et_description = findViewById(R.id.et_description);
         et_year = findViewById(R.id.et_year);
         et_punctuation = findViewById(R.id.et_punctuation);
         et_image = findViewById(R.id.et_image);
-        btn_create = findViewById(R.id.btn_create);
 
         controller = PeliculaController.get(this);
 
@@ -51,7 +49,6 @@ public class CreateActivity extends AppCompatActivity {
         et_punctuation.setText(String.valueOf(pelicula.getPunctuation()));
         et_image.setText(pelicula.getImage());
 
-        btn_create.setText("Modificar");
     }
     public void createMovie(View view) {
         String title = et_title.getText().toString();

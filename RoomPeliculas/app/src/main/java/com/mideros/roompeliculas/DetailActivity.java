@@ -24,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        getSupportActionBar().setTitle(R.string.app_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String id = getIntent().getStringExtra("idPersona");
@@ -35,21 +36,23 @@ public class DetailActivity extends AppCompatActivity {
         tv_description = findViewById(R.id.tv_description);
         tv_year = findViewById(R.id.tv_year);
         tv_punctuation = findViewById(R.id.tv_punctuation);
-      //  tv_image = findViewById(R.id.tv_image);
         imageView=findViewById(R.id.image_view);
-        Picasso.get().load("https://i.imgur.com/DvpvklR.png").into(imageView);
 
-        showPelicula();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showPelicula();
+    }
     private void showPelicula()
     {
+        String url= pelicula.getImage();
         tv_title.setText(pelicula.getTitle());
         tv_description.setText(pelicula.getDescription());
         tv_year.setText(String.valueOf(pelicula.getYear()));
         tv_punctuation.setText(String.valueOf(pelicula.getPunctuation()));
-     //   tv_image.setText(pelicula.getImage());
-
+        Picasso.get().load(url).into(imageView);
     }
 
     public void deleteMovie(View view) {
