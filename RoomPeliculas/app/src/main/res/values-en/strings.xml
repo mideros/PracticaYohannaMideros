@@ -18,6 +18,7 @@
     <string name="btn_create">CREATE</string>
     <string name="btn_delete">DELETE</string>
     <string name="errorEmpy">There are empty fields</string>
+    <string name="errorEmpyPunctuationCamp">write a score</string>
     <string name="errorEmpyTitle">Write the title of the movie</string>
     <string name="errorEmpyDescription">Write the description of the movie</string>
     <string name="errorEmpyYear">Write the year of publication not less than 1.878 and not greater than 2.019</string>

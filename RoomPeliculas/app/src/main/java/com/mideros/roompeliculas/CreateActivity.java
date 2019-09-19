@@ -52,6 +52,7 @@ public class CreateActivity extends AppCompatActivity {
 
     }
     public void createMovie(View view) {
+
         String title = et_title.getText().toString();
         String description = et_description.getText().toString();
         String year = et_year.getText().toString();
@@ -59,7 +60,8 @@ public class CreateActivity extends AppCompatActivity {
         String image = et_image.getText().toString();
 
 
-        if (checkFields(title, description, Integer.parseInt(year),Integer.parseInt(punctuation), image)) {
+        if (checkFields(title, description, year,punctuation, image)) {
+
             if (id != null) {
 
                 pelicula.setTitle(title);
@@ -79,30 +81,36 @@ public class CreateActivity extends AppCompatActivity {
         }
     }
 
-
-    private boolean checkFields(String title, String description, int year, int punctuation,String image){
+    private boolean checkFields(String title, String description, String year, String punctuation,String image){
         boolean fieldsOk =true;
 
-        if("".equals(title)){
+        if("".equals(et_title.getText().toString())){
             fieldsOk=false;
             et_title.setError(getString(R.string.errorEmpyTitle));
         }
-        if("".equals(description))
+        if("".equals(et_description.getText().toString()))
         {
             fieldsOk=false;
             et_description.setError(getString(R.string.errorEmpyDescription));
         }
-        if(("".equals(year))||(year<1878)||(year>2019))
+        if("".equals(et_year.getText().toString()))
         {
             fieldsOk=false;
             et_year.setError(getString(R.string.errorEmpyYear));
         }
-        if(("".equals(punctuation))||(punctuation>5))
+        if(("".equals(et_punctuation.getText().toString())))
         {
             fieldsOk=false;
-            et_punctuation.setError(getString(R.string.errorEmpyPunctuation));
+            et_punctuation.setError(getString(R.string.errorEmpyPunctuationCamp));
+
+        } else {
+            int p = Integer.parseInt(et_punctuation.getText().toString());
+            if (p < 5) {
+                et_punctuation.setError(getString(R.string.errorEmpyPunctuation));
+                fieldsOk = false;
+            }
         }
-        if("".equals(image))
+        if("".equals(et_image.getText().toString()))
         {
             fieldsOk=false;
             et_image.setError(getString(R.string.errorEmpyImage));

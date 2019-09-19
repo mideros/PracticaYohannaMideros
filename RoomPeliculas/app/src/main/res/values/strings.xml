@@ -17,6 +17,7 @@
     <string name="btn_create">CREAR</string>
     <string name="btn_delete">BORRAR</string>
     <string name="errorEmpy">Existen campos vacios</string>
+    <string name="errorEmpyPunctuationCamp">La puntuacion esta vacia</string>
     <string name="errorEmpyTitle">Escribe el titulo de la pelicula</string>
     <string name="errorEmpyDescription">Escribe la descripción de la pelicula</string>
     <string name="errorEmpyYear">Escribe el año de publicación no menor a 1.878 y no mayor a 2.019</string>
