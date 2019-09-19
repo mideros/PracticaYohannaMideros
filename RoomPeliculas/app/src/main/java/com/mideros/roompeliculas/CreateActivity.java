@@ -98,6 +98,7 @@ public class CreateActivity extends AppCompatActivity {
             fieldsOk=false;
             et_year.setError(getString(R.string.errorEmpyYear));
         }
+
         if(("".equals(et_punctuation.getText().toString())))
         {
             fieldsOk=false;
@@ -105,7 +106,7 @@ public class CreateActivity extends AppCompatActivity {
 
         } else {
             int p = Integer.parseInt(et_punctuation.getText().toString());
-            if (p < 5) {
+            if (0>p || 5<p){
                 et_punctuation.setError(getString(R.string.errorEmpyPunctuation));
                 fieldsOk = false;
             }
