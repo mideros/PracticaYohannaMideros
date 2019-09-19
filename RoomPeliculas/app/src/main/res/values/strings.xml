@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoomMovies</string>
+    <string name="app_name">Películas</string>
     <string name="app_list">Lista de Peliculas</string>
     <string name="app_listapi">Lista de Peliculas Ghibli</string>
     <string name="app_create">Crea una pelicula</string>
@@ -19,7 +19,7 @@
     <string name="errorEmpy">Existen campos vacios</string>
     <string name="errorEmpyTitle">Escribe el titulo de la pelicula</string>
     <string name="errorEmpyDescription">Escribe la descripción de la pelicula</string>
-    <string name="errorEmpyYear">Escribe el año de publicación</string>
+    <string name="errorEmpyYear">Escribe el año de publicación no menor a 1.878 y no mayor a 2.019</string>
     <string name="errorEmpyPunctuation">Escribe una puntuación entre 0 y 5</string>
     <string name="errorEmpyImage">Escribe la url de la imagen de la pelicula</string>
     <string name="errorEmpyEmail">Escribe el email</string>

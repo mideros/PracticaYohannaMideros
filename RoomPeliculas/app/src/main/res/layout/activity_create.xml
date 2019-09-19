@@ -85,8 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:inputType="number"
-            android:hint="@string/hintPunctuation"/>
+            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
@@ -111,12 +110,15 @@
 
     <Button
         android:id="@+id/btn_create"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="@string/btn_create"
         android:layout_gravity="center"
-        android:onClick="createMovie"/>
+        android:layout_margin="12dp"
+        android:background="@color/colorYellowApp"
+        android:onClick="createMovie"
+        android:text="@string/btn_create"
+        android:textColor="@color/colorWhiteB"
+        android:textStyle="bold" />
 
 </LinearLayout>
 

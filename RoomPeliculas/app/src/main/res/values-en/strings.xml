@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RoomMovies</string>
+    <string name="app_name">Movies</string>
     <string name="app_list">List of movies</string>
     <string name="app_listapi">List of movies Ghibli</string>
     <string name="app_create">Create a movie</string>
@@ -20,7 +20,7 @@
     <string name="errorEmpy">There are empty fields</string>
     <string name="errorEmpyTitle">Write the title of the movie</string>
     <string name="errorEmpyDescription">Write the description of the movie</string>
-    <string name="errorEmpyYear">write the year of publication</string>
+    <string name="errorEmpyYear">Write the year of publication not less than 1.878 and not greater than 2.019</string>
     <string name="errorEmpyPunctuation">write a score between 0 and 5</string>
     <string name="errorEmpyImage">write a url for the image movie</string>
     <string name="errorEmpyEmail">write a email</string>

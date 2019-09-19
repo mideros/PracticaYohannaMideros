@@ -41,13 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
         prefs = getSharedPreferences("MyPreferences",MODE_PRIVATE);
 
-        String email = prefs.getString("email", null);
-        String password = prefs.getString("password",null);
-
-        if((email==null)&&(password==null)){
-            login();
-        }
-
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -59,18 +52,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void login()
-    {
-        Intent intent = new Intent(MainActivity.this, login.class);
-        startActivity(intent);
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
+        login();
         showPeliculas();
+
     }
-    private void showPeliculas() {
+    public void login()
+    {
+        String email = prefs.getString("email", null);
+        String password = prefs.getString("password",null);
+
+        if((email==null)&&(password==null)){
+            Intent intent = new Intent(MainActivity.this, login.class);
+            startActivity(intent);
+
+        }
+
+    }
+
+     private void showPeliculas() {
         peliculas.clear();
         peliculas.addAll(controller.getPeliculas());
         adapter.notifyDataSetChanged();

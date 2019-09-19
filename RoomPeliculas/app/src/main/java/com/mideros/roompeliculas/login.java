@@ -32,7 +32,7 @@ public class login extends AppCompatActivity {
     public void loginMovie(View view) {
 
             if (checkFields()) {
-                goMainActivity();
+                finish();
             }
         }
 
@@ -54,12 +54,6 @@ public class login extends AppCompatActivity {
     }
 
 
-    private void goMainActivity() {
-        Intent intent = new Intent(login.this, MainActivity.class);
-        startActivity(intent);
-    }
-
-
     public void savePreferences() {
         String email= et_email.getText().toString();
         String password=et_password.getText().toString();
@@ -71,15 +65,11 @@ public class login extends AppCompatActivity {
     }
 
     public void openUrlMovie(View view) {
-        String text= "https://www.abc.es/play/cine7peliculas/";
+        String text= "https://www.abc.es/play/cine/peliculas/";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(text));
         startActivity(intent);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
+
 }

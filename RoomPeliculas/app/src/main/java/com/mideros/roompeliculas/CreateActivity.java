@@ -23,6 +23,7 @@ public class CreateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create);
 
         getSupportActionBar().setTitle(R.string.app_create);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         et_title = findViewById(R.id.et_title);
         et_description = findViewById(R.id.et_description);
@@ -91,12 +92,12 @@ public class CreateActivity extends AppCompatActivity {
             fieldsOk=false;
             et_description.setError(getString(R.string.errorEmpyDescription));
         }
-        if("".equals(year))
+        if(("".equals(year))||(year<1878)||(year>2019))
         {
             fieldsOk=false;
             et_year.setError(getString(R.string.errorEmpyYear));
         }
-        if("".equals(punctuation)||punctuation>5)
+        if(("".equals(punctuation))||(punctuation>5))
         {
             fieldsOk=false;
             et_punctuation.setError(getString(R.string.errorEmpyPunctuation));
@@ -107,6 +108,10 @@ public class CreateActivity extends AppCompatActivity {
             et_image.setError(getString(R.string.errorEmpyImage));
         }
         return fieldsOk;
+    }
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
 }
